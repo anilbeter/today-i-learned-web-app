@@ -48,6 +48,15 @@ h1 {
   background-color: #44403c;
   margin-bottom: 16px;
   padding: 16px 24px;
+  letter-spacing: -1px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  /* BUTONLARIN HER ZAMAN SAĞDA, FACT VE TAG'İN HER ZAMAN SOLDA KALMASINI İSTİYORUM BUNU YAPMAK İÇİN:
+  vote-buttons classına margin-left: auto özelliği ekliyorum (butonlar böylece her zaman sağa yapışık kalıcak)
+  */
 }
 
 .tag {
@@ -55,6 +64,10 @@ h1 {
   font-size: 14px;
   font-family: "Coiny", cursive;
   padding: 3px 10px 0 10px;
+}
+
+.vote-buttons {
+  margin-left: auto;
 }
 
 ul {
