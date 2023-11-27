@@ -8,7 +8,12 @@ body {
   background-color: #292524;
   color: #fafaf9;
   font-family: "Sono", sans-serif;
-  padding: 40px;
+  padding: 48px 64px;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .header {
@@ -25,6 +30,11 @@ body {
   gap: 16px;
 
   /* font cins oldugu icin tamamen center olmadı düzeltmek icin azcık line height ve margin ekliyorum h1 e */
+}
+
+.logo img {
+  width: 68px;
+  height: 68px;
 }
 
 .fact-form {
