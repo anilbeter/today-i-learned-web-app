@@ -80,6 +80,7 @@ h1 {
   font-size: 14px;
   font-family: "Coiny", cursive;
   padding: 3px 10px 0 10px;
+  border-radius: 100px;
 }
 
 .vote-buttons {
