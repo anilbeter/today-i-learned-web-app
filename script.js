@@ -1,5 +1,8 @@
 const btn = document.querySelector(".btn-open");
 const form = document.querySelector(".fact-form");
+const factsList = document.querySelector(".facts-list");
+
+factsList.innerHTML = "";
 
 btn.addEventListener("click", function () {
   if (form.classList.contains("hidden")) {
@@ -11,6 +14,7 @@ btn.addEventListener("click", function () {
   }
 });
 
+/*
 function calcFactAge(year) {
   const currentYear = new Date().getFullYear();
   const age = currentYear - year;
@@ -128,3 +132,4 @@ console.log(factAges);
 // (3) [2, 4, 8]
 console.log(factAges.join(" & "));
 // 2 & 4 & 8
+*/
