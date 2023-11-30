@@ -50,7 +50,26 @@ const factsList = document.querySelector(".facts-list");
 
 // Create DOM elements: Render facts in list
 factsList.innerHTML = "";
-createFactsList(initialFacts);
+
+// Load data from Supabase
+loadFacts();
+
+async function loadFacts() {
+  const res = await fetch(
+    "https://waxvmccwpmqjepheeuza.supabase.co/rest/v1/facts",
+    {
+      headers: {
+        apikey:
+          "***REMOVED***",
+        authorization:
+          "Bearer ***REMOVED***",
+      },
+    }
+  );
+  const data = await res.json();
+  console.log(data);
+  createFactsList(data);
+}
 
 function createFactsList(dataArr) {
   const liArr = dataArr.map(el => {
