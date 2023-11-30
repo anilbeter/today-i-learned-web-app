@@ -32,8 +32,8 @@ const fact = ["Lisbon is the capital of Portugal", 2015, true];
 console.log(fact[0]);
 // Lisbon is the capital of Portugal
 
-const [text, createdIn, isCorrect] = fact;
-console.log(text, createdIn, isCorrect);
+// const [text, createdIn, isCorrect] = fact;
+// console.log(text, createdIn, isCorrect);
 // Lisbon is the capital of Portugal 2015 true
 
 const [firstIndex] = fact;
@@ -44,3 +44,26 @@ console.log(firstIndex);
 const newFact = [...fact, "society"];
 console.log(newFact);
 // (4) ['Lisbon is the capital of Portugal', 2015, true, 'society']
+
+const factObj = {
+  text: "Lisbon is the capital of Portugal",
+  category: "society",
+  createdIn: 2015,
+  isCorrect: true,
+  createSummary() {
+    return `The fact ${
+      this.text
+    } is from the category ${this.category.toUpperCase()}`;
+  },
+};
+console.log(factObj.text);
+// Lisbon is the capital of Portugal
+console.log(factObj["text"]);
+// Lisbon is the capital of Portugal
+
+// Destructure obj
+const { category: kategori, isCorrect } = factObj;
+console.log(kategori, isCorrect);
+// society true
+console.log(factObj.createSummary());
+// The fact Lisbon is the capital of Portugal is from the category SOCIETY
