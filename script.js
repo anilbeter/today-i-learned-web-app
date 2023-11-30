@@ -14,7 +14,9 @@ btn.addEventListener("click", function () {
 function calcFactAge(year) {
   const currentYear = new Date().getFullYear();
   const age = currentYear - year;
-  return age;
+
+  if (age >= 0) return age;
+  else return "Impossible year";
 }
 const age1 = calcFactAge(2015);
 console.log(age1);
