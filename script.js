@@ -23,3 +23,7 @@ console.log(age1);
 
 // console.log(new Date("2023-12-31"));
 // Sun Dec 31 2023 03:00:00 GMT+0300 (GMT+03:00)
+
+const calcFactAge2 = year => new Date().getFullYear() - year;
+console.log(calcFactAge2(2015));
+// 8
