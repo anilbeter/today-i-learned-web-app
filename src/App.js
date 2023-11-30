@@ -1,7 +1,7 @@
 function App() {
   return (
-    <header class="header">
-      <div class="logo">
+    <header className="header">
+      <div className="logo">
         <img src="logo.png" alt="Today I Learned logo" />
         <h1>Today I Learned</h1>
       </div>
