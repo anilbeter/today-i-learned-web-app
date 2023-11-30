@@ -43,6 +43,9 @@ const CATEGORIES = [
   { name: "news", color: "#8b5cf6" },
 ];
 
+// console.log(CATEGORIES.find(cat => cat.name === "society").color);
+// #eab308
+
 // Selecting DOM elements
 const btn = document.querySelector(".btn-open");
 const form = document.querySelector(".fact-form");
@@ -67,6 +70,8 @@ async function loadFacts() {
     }
   );
   const data = await res.json();
+  // const filteredData = data.filter(fact => fact.category === "society");
+
   console.log(data);
   createFactsList(data);
 }
@@ -81,7 +86,9 @@ function createFactsList(dataArr) {
         >(Source)</a
       >
     </p>
-    <span class="tag" style="background-color: #3b82f6">${el.category}</span>
+    <span class="tag" style="background-color: ${
+      CATEGORIES.find(cat => cat.name === el.category).color
+    }">${el.category}</span>
   `;
   });
   const html = liArr.join("");
