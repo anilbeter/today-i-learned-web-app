@@ -41,7 +41,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header setShowForm={setShowForm} />
 
       {/* 2. use state variable */}
       {showForm ? <NewFactForm /> : null}
@@ -54,7 +54,7 @@ function App() {
   );
 }
 
-function Header() {
+function Header({ setShowForm }) {
   const appTitle = "Today I Learned";
 
   return (
