@@ -67,7 +67,7 @@ function App() {
 }
 
 function Loader() {
-  return <p>Loading...</p>;
+  return <p className="message">Loading...</p>;
 }
 
 function Header({ showForm, setShowForm }) {
