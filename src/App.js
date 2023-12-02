@@ -44,7 +44,12 @@ function App() {
   useEffect(function () {
     async function getFacts() {
       setIsLoading(true);
-      const { data: facts, error } = await supabase.from("facts").select("*");
+      const { data: facts, error } = await supabase
+        .from("facts")
+        .select("*")
+        .order("votesInteresting", {
+          ascending: false,
+        });
       setFacts(facts);
       setIsLoading(false);
     }
