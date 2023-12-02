@@ -51,7 +51,9 @@ function App() {
           ascending: false,
         })
         .limit(1000);
-      setFacts(facts);
+
+      if (!error) setFacts(facts);
+      else alert("There was a problem about getting data.");
       setIsLoading(false);
     }
     getFacts();
