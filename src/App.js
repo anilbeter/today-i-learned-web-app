@@ -49,7 +49,8 @@ function App() {
         .select("*")
         .order("votesInteresting", {
           ascending: false,
-        });
+        })
+        .limit(1000);
       setFacts(facts);
       setIsLoading(false);
     }
