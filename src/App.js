@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./style.css";
 
 const initialFacts = [
@@ -34,6 +35,23 @@ const initialFacts = [
   },
 ];
 
+function Counter() {
+  const [count, setCount] = useState(0);
+  // count -> 0
+
+  return (
+    <div>
+      <span style={{ fontSize: "40px" }}> {count}</span>
+      <button
+        className="btn btn-large"
+        onClick={() => setCount(count => count + 1)}
+      >
+        +1
+      </button>
+    </div>
+  );
+}
+
 function App() {
   const appTitle = "Today I Learned";
 
@@ -48,6 +66,7 @@ function App() {
         <button className="btn btn-large btn-open">Share a fact</button>
       </header>
 
+      <Counter />
       <NewFactForm />
 
       <main className="main">
@@ -84,7 +103,7 @@ function CategoryFilter() {
         {CATEGORIES.map(cat => (
           <li key={cat.name} className="category">
             <button
-              class="btn btn-category"
+              className="btn btn-category"
               style={{ backgroundColor: cat.color }}
             >
               {cat.name}
