@@ -36,14 +36,11 @@ const initialFacts = [
 ];
 
 function App() {
-  // 1. define state variable
   const [showForm, setShowForm] = useState(false);
 
   return (
     <>
-      <Header setShowForm={setShowForm} />
-
-      {/* 2. use state variable */}
+      <Header showForm={showForm} setShowForm={setShowForm} />
       {showForm ? <NewFactForm /> : null}
 
       <main className="main">
@@ -54,7 +51,7 @@ function App() {
   );
 }
 
-function Header({ setShowForm }) {
+function Header({ showForm, setShowForm }) {
   const appTitle = "Today I Learned";
 
   return (
@@ -65,10 +62,9 @@ function Header({ setShowForm }) {
       </div>
       <button
         className="btn btn-large btn-open"
-        // update the state variable
         onClick={() => setShowForm(show => !show)}
       >
-        Share a fact
+        {!showForm ? "Share a fact" : "Close"}
       </button>
     </header>
   );
