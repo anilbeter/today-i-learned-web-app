@@ -62,10 +62,8 @@ async function loadFacts() {
     "https://waxvmccwpmqjepheeuza.supabase.co/rest/v1/facts",
     {
       headers: {
-        apikey:
-          "***REMOVED***",
-        authorization:
-          "Bearer ***REMOVED***",
+        apikey: "",
+        authorization: "",
       },
     }
   );
